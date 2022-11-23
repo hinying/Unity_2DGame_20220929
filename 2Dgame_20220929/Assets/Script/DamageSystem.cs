@@ -11,6 +11,11 @@ namespace Hsin
         private GameObject prefabExplosion;
         [SerializeField, Header("碰到會爆炸的名稱")]
         private string nameTarget;
+        [Header("受傷與爆炸音效")]
+        [SerializeField]        
+        private AudioClip soundHit;
+        [SerializeField]
+        private AudioClip soundExplosion;
 
         // 碰撞開始時執行一次
         private void OnCollisionEnter2D(Collision2D collision)
@@ -22,6 +27,9 @@ namespace Hsin
             {
                 // 生成爆炸預製物 座標與角度 跟此物件相同
                 Instantiate(prefabExplosion, transform.position, transform.rotation);
+
+                SoundManager.instance.PlaySound(soundHit, new Vector2(0.7f, 0.9f));
+                SoundManager.instance.PlaySound(soundExplosion, new Vector2(1.2f, 1.5f));
 
                 // 刪除 Destroy
                 // 刪除 gameObject
