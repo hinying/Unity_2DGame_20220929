@@ -1,11 +1,11 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace Hsin
 {
     /// <summary>
-    /// ­µ®ÄºŞ²z¾¹
+    /// éŸ³æ•ˆç®¡ç†å™¨
     /// </summary>
-    /// ®M¥Îµ{¦¡®É°õ¦æ¡G­n¨D¤¸¥ó(Ãş«¬(¤¸¥ó)) - ²Ä¤@¦¸®M¥Î¸}¥»µ¹ª«¥ó®É·|²K¥[¤¸¥ó
+    /// å¥—ç”¨ç¨‹å¼æ™‚åŸ·è¡Œï¼šè¦æ±‚å…ƒä»¶(é¡å‹(å…ƒä»¶)) - ç¬¬ä¸€æ¬¡å¥—ç”¨è…³æœ¬çµ¦ç‰©ä»¶æ™‚æœƒæ·»åŠ å…ƒä»¶
     [RequireComponent(typeof(AudioSource))]
     public class SoundManager : MonoBehaviour
     {
@@ -15,17 +15,17 @@ namespace Hsin
 
         private void Awake()
         {
-            // this ¦¹Ãş§O
+            // this æ­¤é¡åˆ¥
             instance = this;
 
             aud = GetComponent<AudioSource>();
         }
 
         /// <summary>
-        /// ¼½©ñ­µ®Ä
+        /// æ’­æ”¾éŸ³æ•ˆ
         /// </summary>
-        /// <param name="sound">­µ®Ä</param>
-        /// <param name="rangeVolume">­µ¶q½d³ò</param>
+        /// <param name="sound">éŸ³æ•ˆ</param>
+        /// <param name="rangeVolume">éŸ³é‡ç¯„åœ</param>
         public void PlaySound(AudioClip sound, Vector2 rangeVolume)
         {
             float volume = Random.Range(rangeVolume.x, rangeVolume.y);

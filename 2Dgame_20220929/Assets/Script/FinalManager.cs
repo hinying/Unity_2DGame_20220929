@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,22 +7,22 @@ using System.Collections;
 namespace Hsin
 {
     /// <summary>
-    /// µ²§ôºŞ²z¾¹
+    /// çµæŸç®¡ç†å™¨
     /// </summary>
     public class FinalManager : MonoBehaviour
     {
         public static FinalManager instance;
 
         /// <summary>
-        /// µ²§ôµe¥¬
+        /// çµæŸç•«å¸ƒ
         /// </summary>
         private CanvasGroup groupFinal;
         /// <summary>
-        /// µ²§ô¼ĞÃD
+        /// çµæŸæ¨™é¡Œ
         /// </summary>
         private TextMeshProUGUI textTitle;
         /// <summary>
-        /// ­«·s¹CÀ¸
+        /// é‡æ–°éŠæˆ²
         /// </summary>
         private Button btnReplay;
 
@@ -37,9 +37,9 @@ namespace Hsin
         }
 
         /// <summary>
-        /// ¹CÀ¸µ²§ô
+        /// éŠæˆ²çµæŸ
         /// </summary>
-        /// <param name="title">¹CÀ¸¼ĞÃD</param>
+        /// <param name="title">éŠæˆ²æ¨™é¡Œ</param>
         public void GameOver(string title)
         {
             textTitle.text = title;
@@ -47,7 +47,7 @@ namespace Hsin
         }
 
         /// <summary>
-        /// ²H¤J
+        /// æ·¡å…¥
         /// </summary>
         /// <returns></returns>
         private IEnumerator FadeIn()
@@ -63,11 +63,11 @@ namespace Hsin
         }
 
         /// <summary>
-        /// ­«·s¹CÀ¸
+        /// é‡æ–°éŠæˆ²
         /// </summary>
         private void Replay()
         {
-            SceneManager.LoadScene("¶}ÀY¿ï³æ");
+            SceneManager.LoadScene("é–‹é ­é¸å–®");
         }
 
     }

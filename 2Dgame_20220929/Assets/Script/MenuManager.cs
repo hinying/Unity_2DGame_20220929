@@ -1,31 +1,31 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Hsin
 {
     /// <summary>
-    /// ¿ï³æºŞ²z¾¹
+    /// é¸å–®ç®¡ç†å™¨
     /// </summary>
     public class MenuManager : MonoBehaviour
     {
         /// <summary>
-        /// ¶}©l¹CÀ¸
+        /// é–‹å§‹éŠæˆ²
         /// </summary>
         private Button btnPlay;
 
         private void Awake()
         {
-            btnPlay = GameObject.Find("¶}©l¹CÀ¸").GetComponent<Button>();
+            btnPlay = GameObject.Find("é–‹å§‹éŠæˆ²").GetComponent<Button>();
             btnPlay.onClick.AddListener(StartGame);
         }
 
         /// <summary>
-        /// ¶}©l¹CÀ¸
+        /// é–‹å§‹éŠæˆ²
         /// </summary>
         private void StartGame()
         {
-            SceneManager.LoadScene("¹CÀ¸³õ´º");
+            SceneManager.LoadScene("éŠæˆ²å ´æ™¯");
         }
     }
 
